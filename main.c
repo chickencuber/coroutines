@@ -13,6 +13,7 @@ int main() {
     coroutine_init();
     coroutine_go(test, (void*) 10);
     coroutine_go(test, (void*) 10);
+    test((void*) 5);
     while(coroutine_alive() > 1) coroutine_yield();
     coroutine_done();
     return 0;
